@@ -864,8 +864,7 @@ class PDFDocumentWithTables extends PDFDocument {
             if (valign && valign !== 'top') {
               const heightText = this.heightOfString(cell, {
                 width: columnSizes[index] - (cellPadding.left + cellPadding.right),
-                align: "left",
-                features: ['rtla']
+                align: align,
               });
               // line height, spacing hehight, cell and text diference
               topTextToAlignVertically = rowDistance - columnSpacing + (rectCell.height - heightText) / 2;
@@ -876,7 +875,8 @@ class PDFDocumentWithTables extends PDFDocument {
               lastPositionX + (cellPadding.left),
               startY + topTextToAlignVertically, {
               width: columnSizes[index] - (cellPadding.left + cellPadding.right),
-              align: align,
+              align: "right",
+              features: ['rtla']
             });
 
             lastPositionX += columnSizes[index];
