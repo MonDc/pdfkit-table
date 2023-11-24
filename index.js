@@ -556,7 +556,7 @@ class PDFDocumentWithTables extends PDFDocument {
                   lastPositionX + (cellPadding.left),
                   startY, {
                   width: Number(columnSizes[i]) - (cellPadding.left + cellPadding.right),
-                  align: "center", // MH MODIFIED
+                  align: "right", // MH MODIFIED
                   features: ['rtla']// MH MODIFIED
                 });
 
@@ -605,6 +605,8 @@ class PDFDocumentWithTables extends PDFDocument {
                   y: startY - columnSpacing - (rowDistance * 2),
                   width: width,
                   height: this.headerHeight + columnSpacing,
+                  align: "right", // MH MODIFIED
+                  features: ['rtla']// MH MODIFIED
                 };
 
                 // add background
