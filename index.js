@@ -619,7 +619,7 @@ class PDFDocumentWithTables extends PDFDocument {
                   startY, {
                   width: width - (cellPadding.left + cellPadding.right),
                   align: align,
-                  align: "left", // MH MODIFIED
+                  align: "center", // MH MODIFIED
                   features: ['rtla']// MH MODIFIED
                 })
 
