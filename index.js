@@ -556,7 +556,8 @@ class PDFDocumentWithTables extends PDFDocument {
                   lastPositionX + (cellPadding.left),
                   startY, {
                   width: Number(columnSizes[i]) - (cellPadding.left + cellPadding.right),
-                  align: 'left',
+                  align: "right", // MH MODIFIED
+                  features: ['rtla']// MH MODIFIED
                 });
 
                 lastPositionX += columnSizes[i] >> 0;
@@ -875,8 +876,8 @@ class PDFDocumentWithTables extends PDFDocument {
               lastPositionX + (cellPadding.left),
               startY + topTextToAlignVertically, {
               width: columnSizes[index] - (cellPadding.left + cellPadding.right),
-              align: "right",
-              features: ['rtla']
+              align: "right", // MH MODIFIED
+              features: ['rtla']// MH MODIFIED
             });
 
             lastPositionX += columnSizes[index];
