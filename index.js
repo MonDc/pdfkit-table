@@ -605,8 +605,6 @@ class PDFDocumentWithTables extends PDFDocument {
                   y: startY - columnSpacing - (rowDistance * 2),
                   width: width,
                   height: this.headerHeight + columnSpacing,
-                  align: "center", // MH MODIFIED
-                  features: ['rtla']// MH MODIFIED
                 };
 
                 // add background
