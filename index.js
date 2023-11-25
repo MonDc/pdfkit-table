@@ -62,7 +62,6 @@ class PDFDocumentWithTables extends PDFDocument {
    * @param {Function} callback 
    */
   table(table, options, callback) {
-    let pageNumber = 1; // MH MODIFIED
     return new Promise((resolve, reject) => {
       try {
 
@@ -189,9 +188,6 @@ class PDFDocumentWithTables extends PDFDocument {
         // event emitter
         const onFirePageAdded = () => {
           // startX = this.page.margins.left;
-
-          pageNumber++; // MH MODIFIED
-
           startY = this.page.margins.top;
           rowBottomY = 0;
           // lockAddPage || this.addPage(this.options);
